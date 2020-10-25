@@ -11,7 +11,7 @@ import (
 	"os/exec"
 	"runtime"
 
-	"fallingelk/shell"
+	"github.com/schwartz1375/fallingelk/shell"
 )
 
 const nixShellPath = "/bin/sh"
