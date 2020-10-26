@@ -9,7 +9,7 @@ FallingElk is a golang (recommend v1.15, v1.13 min) cross platform webshell.
 * osslsigncode (needed to sign the windows binary) if you don't care about signing you can comment these lines out in the Makefile.
 
 ## How to build
-To get a POC working you shouldn't have to modify anything. Note becasue the variables are injected at build time via the Makefile.  Second, one may need to uncomment the log.Fatal lines in the main.go for troubleshooting, these statements are commented out for threat emulation purposes to excerise the blue IR and RE teams.  Note, you may also need to run "make depends" first to generate the generate self signed certificate.
+To get the POC working you shouldn't have to modify anything.  You may need to uncomment the log.Fatal lines in the main.go file for troubleshooting, these statements are commented out for threat emulation purposes to excerise the blue IR and RE teams.  Note, you may also need to run "make depends" first to generate the generate self signed certificate. 
 
 ## Usage
 After the binary has been executed on the target you interact with via the following:
@@ -22,4 +22,4 @@ Things to consider for windows:
 * The name of the binary
 * The icon
 * The values in the ./resource/verioninfo.json file especially "OriginalFilename" - this should match the binary name set in the Makefile
-* The fact this uses a self signed Certificate 
+* The fact this uses a self signed certificate 
