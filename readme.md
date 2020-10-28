@@ -1,4 +1,6 @@
 ## FallingElk 
+[![License](https://img.shields.io/badge/license-MIT-_red.svg)](https://opensource.org/licenses/MIT)
+[![Go Report Card](https://goreportcard.com/badge/github.com/schwartz1375/fallingelk)](https://goreportcard.com/report/github.com/schwartz1375/fallingelk)
 
 FallingElk is a golang (recommend v1.15, v1.13 min) cross platform webshell.
 
