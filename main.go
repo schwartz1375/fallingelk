@@ -87,6 +87,6 @@ func requestHandler(writer http.ResponseWriter, request *http.Request) {
 		fmt.Fprintf(writer, "error with command.\n%s\n", err.Error())
 	}
 
-	//write output of command to the reponse writer interface
+	//write output of command to the response writer interface
 	fmt.Fprintf(writer, "Output: \n%s\n", output)
 }
