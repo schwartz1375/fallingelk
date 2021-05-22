@@ -18,14 +18,14 @@ depends:
 windows32:
 	goversioninfo -icon=./resource/icon.ico ./resource/verioninfo.json
 	GOOS=windows GOARCH=386 ${BUILD} ${WIN_LDFLAGS} -o ${OUT_WIN} ${WIN_SRC}
-	osslsigncode sign -certs server.pem -key server.key -i http://www.acme.com -in ${OUT_WIN} -out ${SIGNED_WIN_OUT}
-	osslsigncode verify ${SIGNED_WIN_OUT}
+	osslsigncode sign -certs ${SRV_PEM} -key ${SRV_KEY} -n "Fallingelk" -i http://www.acme.com -in ${OUT_WIN} -out ${SIGNED_WIN_OUT}
+	osslsigncode verify -verbose -CAfile ${SRV_PEM} ${SIGNED_WIN_OUT}
 
 windows64:
 	goversioninfo -icon=./resource/icon.ico ./resource/verioninfo.json
 	GOOS=windows GOARCH=amd64 ${BUILD} ${WIN_LDFLAGS} -o ${OUT_WIN} ${WIN_SRC} 
-	osslsigncode sign -certs server.pem -key server.key -i http://www.acme.com -in ${OUT_WIN} -out ${SIGNED_WIN_OUT}
-	osslsigncode verify ${SIGNED_WIN_OUT}
+	osslsigncode sign -certs ${SRV_PEM} -key ${SRV_KEY} -n "Fallingelk" -i http://www.acme.com -in ${OUT_WIN} -out ${SIGNED_WIN_OUT}
+	osslsigncode verify -verbose -CAfile ${SRV_PEM} ${SIGNED_WIN_OUT}
 
 linux32:
 	GOOS=linux GOARCH=386 ${BUILD} ${LINUX_LDFLAGS} -o ${OUT_LINUX} ${NIC_SRC}
