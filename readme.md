@@ -4,7 +4,7 @@
 
 FallingElk is a golang (recommend v1.15, v1.13 min) cross platform webshell.
 
-## Dependices
+## Dependencies
 * [Go](https://golang.org/) 1.13+
 * GNU make
 * [goversioninfo](https://github.com/josephspurrier/goversioninfo) (needed to add the windows resource infromation to the binary)
